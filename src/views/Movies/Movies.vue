@@ -3,11 +3,11 @@
     <h1>All Movies</h1>
     <div v-for="movie in movies" v-bind:key="movie.id">
       <span class="image">
-        <img src="movie.poster_path" alt="" />
+        <img v-bind:src="movie.poster_path" v-bind:alt="movie.name" />
+        <img :src="movie.poster_path" alt="" />
       </span>
       <h2>{{ movie.original_title }}</h2>
       <h3>{{ movie.overview }}</h3>
-      <img v-bind:src="movie.url" v-bind:alt="movie.name" />
     </div>
   </div>
 </template>
