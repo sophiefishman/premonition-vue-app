@@ -17,7 +17,7 @@ export default {
     };
   },
   created: function () {
-    axios.get("/movies/" + this.$route.params.id).then((response) => {
+    axios.get(`/movies/${this.original_title}`).then((response) => {
       console.log("movies show", response);
       this.movie = response.data;
     });

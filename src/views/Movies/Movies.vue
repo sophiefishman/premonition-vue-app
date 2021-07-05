@@ -10,12 +10,12 @@
     <br />
     <div v-for="movie in movies" v-bind:key="movie.id">
       <span class="image">
-        <img v-bind:src="movie.poster_path" v-bind:alt="movie.name" />
+        <img v-bind:src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`" v-bind:alt="movie.name" />
         <img :src="movie.poster_path" alt="" />
       </span>
       <h2>{{ movie.original_title }}</h2>
       <p>Release Date: {{ movie.release_date }}</p>
-      <h3>{{ movie.overview }}</h3>
+      <p>{{ movie.overview }}</p>
     </div>
   </div>
 </template>

@@ -6,6 +6,7 @@ import Login from "../views/Users/Login.vue";
 import Logout from "../views/Users/Logout.vue";
 import Movies from "../views/Movies/Movies.vue";
 import MoviesShow from "../views/Movies/MoviesShow.vue";
+import Favorites from "../views/Favorites/Favorites.vue";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: "/movies/",
     name: "MoviesShow",
     component: MoviesShow,
+  },
+  {
+    path: "/favorites",
+    name: "Favorites",
+    component: Favorites,
   },
   {
     path: "/about",
