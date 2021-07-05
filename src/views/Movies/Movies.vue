@@ -7,6 +7,7 @@
         <img :src="movie.poster_path" alt="" />
       </span>
       <h2>{{ movie.original_title }}</h2>
+      <p>Release Date: {{ movie.release_date }}</p>
       <h3>{{ movie.overview }}</h3>
     </div>
   </div>
