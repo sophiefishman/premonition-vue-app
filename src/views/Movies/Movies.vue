@@ -1,6 +1,13 @@
 <template>
   <div class="movies">
-    <h1>All Movies</h1>
+    <h1>Movies</h1>
+    <div>
+      <form v-on:submit.prevent="searchMovies()">
+        <input type="text" v-model="search" placeholder="search movies" />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+    <br />
     <div v-for="movie in movies" v-bind:key="movie.id">
       <span class="image">
         <img v-bind:src="movie.poster_path" v-bind:alt="movie.name" />
@@ -22,14 +29,15 @@ export default {
     return {
       movies: [],
       query_string: "",
+      search: "",
     };
   },
   created: function () {
-    this.indexMovies();
+    this.searchMovies();
   },
   methods: {
-    indexMovies: function () {
-      axios.get("/movies?query=the conjuring").then((response) => {
+    searchMovies: function () {
+      axios.get(`/movies?query=${this.search}`).then((response) => {
         console.log("movies index", response);
         this.movies = response.data;
       });

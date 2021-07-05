@@ -5,6 +5,7 @@ import Signup from "../views/Users/Signup.vue";
 import Login from "../views/Users/Login.vue";
 import Logout from "../views/Users/Logout.vue";
 import Movies from "../views/Movies/Movies.vue";
+import MoviesShow from "../views/Movies/MoviesShow.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: "/movies",
     name: "Movies",
     component: Movies,
+  },
+  {
+    path: "/movies/",
+    name: "MoviesShow",
+    component: MoviesShow,
   },
   {
     path: "/about",
