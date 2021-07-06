@@ -9,15 +9,15 @@
     <p>Overview: {{ movie.overview }}</p>
     <hr />
     <h1>Recommended Movies</h1>
-    <!-- <div v-for="result in movie.recommendations.results" v-bind:key="result.id">
+    <div v-for="result in movie.recommendations.results" v-bind:key="result.id">
       <h2>{{ result.original_title }}</h2>
       <span class="image">
         <img v-bind:src="`https://image.tmdb.org/t/p/w500${result.poster_path}`" v-bind:alt="movie.name" />
         <img :src="result.poster_path" alt="" />
       </span>
-      <p>Release Date: {{ esult.release_date }}</p>
+      <p>Release Date: {{ result.release_date }}</p>
       <p>Overview: {{ result.overview }}</p>
-    </div> -->
+    </div>
     <hr />
     <router-link to="/movies">Back to search movies</router-link>
   </div>
