@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Signup from "../views/Users/Signup.vue";
 import Login from "../views/Users/Login.vue";
 import Logout from "../views/Users/Logout.vue";
+import UsersShow from "../views/Users/Show.vue";
 import MoviesIndex from "../views/Movies/Index.vue";
 import MoviesShow from "../views/Movies/Show.vue";
 import FavoritesIndex from "../views/Favorites/Index.vue";
@@ -30,6 +31,11 @@ const routes = [
     path: "/logout",
     name: "Logout",
     component: Logout,
+  },
+  {
+    path: "/users/show",
+    name: "UsersShow",
+    component: UsersShow,
   },
   {
     path: "/movies/index",
