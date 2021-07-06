@@ -14,7 +14,7 @@ export default {
     };
   },
   created: function () {
-    axios.get("/users/" + this.$route.params.id).then((response) => {
+    axios.get(`/users/${this.$route.params.id}`).then((response) => {
       console.log("users show", response);
       this.user = response.data;
     });

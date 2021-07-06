@@ -33,22 +33,22 @@ const routes = [
     component: Logout,
   },
   {
-    path: "/users/show",
+    path: "/users/:id",
     name: "UsersShow",
     component: UsersShow,
   },
   {
-    path: "/movies/index",
+    path: "/movies",
     name: "MoviesIndex",
     component: MoviesIndex,
   },
   {
-    path: "/movies/show",
+    path: "/movies/:id",
     name: "MoviesShow",
     component: MoviesShow,
   },
   {
-    path: "/favorites/index",
+    path: "/favorites",
     name: "FavoritesIndex",
     component: FavoritesIndex,
   },

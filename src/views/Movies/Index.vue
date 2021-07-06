@@ -16,6 +16,8 @@
       <h2>{{ movie.original_title }}</h2>
       <p>Release Date: {{ movie.release_date }}</p>
       <p>{{ movie.overview }}</p>
+      <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link>
+      <br />
     </div>
   </div>
 </template>
