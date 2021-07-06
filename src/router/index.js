@@ -4,9 +4,9 @@ import Home from "../views/Home.vue";
 import Signup from "../views/Users/Signup.vue";
 import Login from "../views/Users/Login.vue";
 import Logout from "../views/Users/Logout.vue";
-import Movies from "../views/Movies/Movies.vue";
-import MoviesShow from "../views/Movies/MoviesShow.vue";
-import Favorites from "../views/Favorites/Favorites.vue";
+import MoviesIndex from "../views/Movies/Index.vue";
+import MoviesShow from "../views/Movies/Show.vue";
+import FavoritesIndex from "../views/Favorites/Index.vue";
 
 Vue.use(VueRouter);
 
@@ -32,19 +32,19 @@ const routes = [
     component: Logout,
   },
   {
-    path: "/movies",
-    name: "Movies",
-    component: Movies,
+    path: "/movies/index",
+    name: "MoviesIndex",
+    component: MoviesIndex,
   },
   {
-    path: "/movies/",
+    path: "/movies/show",
     name: "MoviesShow",
     component: MoviesShow,
   },
   {
-    path: "/favorites",
-    name: "Favorites",
-    component: Favorites,
+    path: "/favorites/index",
+    name: "FavoritesIndex",
+    component: FavoritesIndex,
   },
   {
     path: "/about",
