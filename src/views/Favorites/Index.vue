@@ -11,9 +11,16 @@
         <img :src="favorite.movie.poster_path" alt="" />
       </span>
       <p>Movie Overview: {{ favorite.movie.overview }}</p>
-      <span>Review:</span>
-      <p style="white-space: pre-line">{{ review }}</p>
-      <textarea v-model="review" placeholder="notes for this movie"></textarea>
+      <span>Your Review:</span>
+      <p>{{ favorite.review }}</p>
+      <form v-on:submit.prevent="editReview(favorite)">
+        <label>
+          <input type="text" v-model="favorite.review" placeholder="notes for this movie" />
+        </label>
+        <input type="submit" value="Save Changes" />
+        <br />
+      </form>
+      <button v-on:click="destroyFavorite(favorite)">Remove from Favorites</button>
       <br />
     </div>
   </div>
@@ -29,13 +36,34 @@ export default {
     };
   },
   created: function () {
-    this.indexFavorites();
+    // this.indexFavorites();
+    axios.get("/favorites").then((response) => {
+      console.log("favorites index", response);
+      this.favorites = response.data;
+    });
   },
   methods: {
-    indexFavorites: function () {
-      axios.get("/favorites").then((response) => {
-        console.log("favorites index", response);
-        this.favorites = response.data;
+    // indexFavorites: function () {
+    //   axios.get("/favorites").then((response) => {
+    //     console.log("favorites index", response);
+    //     this.favorites = response.data;
+    //   });
+    // },
+    editReview: function (favorite) {
+      var params = {
+        review: favorite.review,
+      };
+      axios.patch("/favorites/" + favorite.id, params).then((response) => {
+        console.log("favorites update", response);
+        this.favorites.unshift();
+        // this.currentFavorite = {};
+      });
+    },
+    destroyFavorite: function (favorite) {
+      axios.delete("/favorites/" + favorite.id).then((response) => {
+        console.log("favorites destroy", response);
+        var index = this.favorites.indexOf(favorite);
+        this.favorites.splice(index, 1);
       });
     },
   },

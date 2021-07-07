@@ -41,7 +41,7 @@ export default {
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.setItem("user_id", response.data.user_id);
           this.$parent.flashMessage = "Successfully logged in!";
-          this.$router.push("/users");
+          this.$router.push(`/users/${this.$parent.getUserId()}`);
         })
         .catch((error) => {
           console.log(error.response);

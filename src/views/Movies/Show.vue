@@ -7,6 +7,7 @@
     </span>
     <p>Release Date: {{ movie.release_date }}</p>
     <p>Overview: {{ movie.overview }}</p>
+    <button v-on:click="addFavorite()">Add to Favorites</button>
     <hr />
     <h1>Recommended Movies</h1>
     <div v-for="result in movie.recommendations.results" v-bind:key="result.id">
@@ -29,6 +30,7 @@ export default {
   data: function () {
     return {
       movie: {},
+      newMovieParam: {},
     };
   },
   created: function () {
@@ -37,6 +39,14 @@ export default {
       this.movie = response.data;
     });
   },
-  methods: {},
+  methods: {
+    addFavorite: function () {
+      this.newMovieParam.tmdb_api_id = this.$route.params.id;
+      axios.post("/favorites", this.newMovieParam).then((response) => {
+        console.log("Added to Favorites", response.data);
+        this.$router.push("/favorites");
+      });
+    },
+  },
 };
 </script>
