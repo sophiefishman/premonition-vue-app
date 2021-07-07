@@ -4,9 +4,9 @@
       <router-link to="/">Home |</router-link>
       <router-link v-if="!isLoggedIn()" to="/signup">Signup |</router-link>
       <router-link v-if="!isLoggedIn()" to="/login">Login |</router-link>
-      <router-link v-if="isLoggedIn()" to="/users/:id">Profile |</router-link>
+      <router-link v-if="isLoggedIn()" to="/users/">Profile |</router-link>
       <router-link v-if="isLoggedIn()" to="/logout">Logout |</router-link>
-      <router-link to="/movies/index">Movies |</router-link>
+      <router-link to="/movies/">Movies |</router-link>
       <router-link to="/favorites/index">Favorites |</router-link>
     </div>
     <router-view />
