@@ -15,7 +15,7 @@
       <p>{{ favorite.review }}</p>
       <form v-on:submit.prevent="editReview(favorite)">
         <label>
-          <input type="text" v-model="favorite.review" placeholder="notes for this movie" />
+          <textarea type="text" rows="4" cols="50" v-model="favorite.review" placeholder="notes for this movie" />
         </label>
         <input type="submit" value="Save Changes" />
         <br />
