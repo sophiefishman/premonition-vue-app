@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>P R E M O N I T I O N</h1>
+    <!-- <h1>P R E M O N I T I O N</h1>
     <h2>what will you watch next ....</h2>
     <img src="https://www.nerdinfinite.com/wp-content/uploads/2017/09/Blade-Runner-Postere.jpg" alt="" />
     <img
@@ -8,7 +8,7 @@
       alt=""
     />
     <img src="https://i.insider.com/5e74f1aa235c180a1708f958?width=700" alt="" />
-    <img src="https://i.pinimg.com/originals/85/e1/53/85e153eeb54c15d41974df0f7384d9f8.jpg" alt="" />
+    <img src="https://i.pinimg.com/originals/85/e1/53/85e153eeb54c15d41974df0f7384d9f8.jpg" alt="" /> -->
   </div>
 </template>
 
