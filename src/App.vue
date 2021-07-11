@@ -14,7 +14,7 @@
         <div class="container">
           <a href="index.html" class="navbar-brand me-4">
             <!-- <img src="images/logo-light.png" class="logo-light" alt="" height="40" />
-          <img src="images/logo-icon.png" class="logo-dark" alt="" height="40" /> -->
+            <img src="images/logo-icon.png" class="logo-dark" alt="" height="40" /> -->
           </a>
 
           <div class="navbar-header">
@@ -32,15 +32,25 @@
 
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="nav-item"><router-link to="/">Home</router-link></li>
-              <li class="nav-item"><router-link to="/movies/">Movies</router-link></li>
-              <li class="nav-item"><router-link to="/favorites">Favorites</router-link></li>
+              <li class="nav-item"><router-link class="nav-link sub-menu-item" to="/">Home</router-link></li>
+              <li class="nav-item"><router-link class="nav-link sub-menu-item" to="/movies/">Movies</router-link></li>
               <li class="nav-item">
-                <router-link v-if="isLoggedIn()" :to="`/users/${getUserId()}`">Profile</router-link>
+                <router-link class="nav-link sub-menu-item" to="/favorites">Favorites</router-link>
               </li>
-              <li class="nav-item"><router-link v-if="!isLoggedIn()" to="/login">Login</router-link></li>
-              <li class="nav-item"><router-link v-if="isLoggedIn()" to="/logout">Logout</router-link></li>
-              <li class="nav-item"><router-link v-if="!isLoggedIn()" to="/signup">Signup</router-link></li>
+              <li class="nav-item">
+                <router-link class="nav-link sub-menu-item" v-if="isLoggedIn()" :to="`/users/${getUserId()}`">
+                  Profile
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link sub-menu-item" v-if="!isLoggedIn()" to="/login">Login</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link sub-menu-item" v-if="isLoggedIn()" to="/logout">Logout</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link sub-menu-item" v-if="!isLoggedIn()" to="/signup">Signup</router-link>
+              </li>
             </ul>
           </div>
         </div>
