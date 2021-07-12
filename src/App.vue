@@ -13,8 +13,12 @@
       <nav class="navbar navbar-expand-lg fixed-top sticky mx-auto" id="navbar">
         <div class="container">
           <a href="index.html" class="navbar-brand me-4">
-            <!-- <img src="images/logo-light.png" class="logo-light" alt="" height="40" />
-            <img src="images/logo-icon.png" class="logo-dark" alt="" height="40" /> -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Skull-Icon.svg/2048px-Skull-Icon.svg.png"
+              class="logo-dark"
+              alt=""
+              height="40"
+            />
           </a>
 
           <div class="navbar-header">
