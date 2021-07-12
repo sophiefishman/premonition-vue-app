@@ -1,44 +1,118 @@
 <template>
   <div class="favorites-index">
-    <section class="sm-section">
-      <div class="container">
-        <!-- END ROW -->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="row">
-              <div v-for="favorite in favorites" v-bind:key="favorite.id" class="col-lg-4 col-md-6">
-                <div class="product-item mt-4">
-                  <div class="product-img rounded position-relative">
+    <body data-bs-target=".navbar" data-bs-offset="110">
+      <section class="sm-section">
+        <div v-for="favorite in favorites" v-bind:key="favorite.id" class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-md-5 mt-4">
+                  <div class="position-relative">
                     <img
-                      class="img-fluid"
+                      class="img-fluid rounded-3"
                       v-bind:src="`https://image.tmdb.org/t/p/w500${favorite.movie.poster_path}`"
                       v-bind:alt="favorite.movie.name"
                     />
                   </div>
-                  <div class="pro-content my-3">
-                    <div class="d-flex align-items-center">
-                      <ins class="pe-2 fs-15 fw-semibold text-decoration-none text-dark">
+                </div>
+                <div class="col-md-7 mt-4">
+                  <div class="pro-detail-content">
+                    <div class="price my-3">
+                      <del class="pe-2 fs-15 fw-semibold text-decoration-none text-dark">
                         {{ favorite.movie.original_title }}
-                      </ins>
+                      </del>
                     </div>
-                    <a href="javascript:void(0)">
-                      <p class="text-muted fw-normal lh-base my-1">{{ favorite.movie.overview }}</p>
-                      <hr />
-                      <p class="text-muted fw-normal lh-base my-1">Your Notes:</p>
-                      <p class="text-muted fw-normal lh-base my-1">{{ favorite.review }}</p>
-                    </a>
+
+                    <p class="text-muted fs-16 my-3">
+                      {{ favorite.movie.overview }}
+                    </p>
+                    <!-- detail tab -->
+                    <section class="section bg-light">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <nav class="pro-detail-area">
+                              <div class="nav nav-tabs border-bottom detail-title" id="nav-tab" role="tablist">
+                                <a
+                                  class="nav-link border-0"
+                                  id="nav-profile-tab"
+                                  data-bs-toggle="tab"
+                                  href="#nav-profile"
+                                  role="tab"
+                                  aria-controls="nav-profile"
+                                  aria-selected="false"
+                                >
+                                  Your Movie Notes
+                                </a>
+                              </div>
+                            </nav>
+                            <div class="tab-content py-4" id="nav-tabContent">
+                              <div
+                                class="tab-pane fade show active"
+                                id="nav-home"
+                                role="tabpanel"
+                                aria-labelledby="nav-home-tab"
+                              >
+                                <p class="text-muted fs-16">
+                                  {{ favorite.review }}
+                                </p>
+                              </div>
+                            </div>
+                            <!-- end nav -->
+                            <div>
+                              <p class="lh-base fw-semibold mt-4 mb-3">Update Your Notes</p>
+                              <form v-on:submit.prevent="editReview(favorite)">
+                                <div class="row g-4 mb-2"></div>
+                                <div class="row g-4 mb-2">
+                                  <div class="col-lg-12">
+                                    <div class="form-floating mb-3">
+                                      <textarea
+                                        class="form-control"
+                                        placeholder="Your Message...."
+                                        style="height: 100px"
+                                        v-model="favorite.review"
+                                      ></textarea>
+                                      <label class="text-muted">Your Review</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row"></div>
+                                <div class="row">
+                                  <div class="col-lg-12 mt-3">
+                                    <a href="javascript:void(0)" class="btn btn-primary">
+                                      Update Notes
+                                      <i class="icon-xs" data-feather="chevrons-right"></i>
+                                    </a>
+                                  </div>
+                                  <div class="col-lg-12 mt-3">
+                                    <a
+                                      href="javascript:void(0)"
+                                      class="btn btn-primary mt-3"
+                                      v-on:click="destroyFavorite(favorite)"
+                                    >
+                                      Delete Favorite
+                                      <i class="icon-xs" data-feather="chevrons-right"></i>
+                                    </a>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end row -->
+                      </div>
+                    </section>
+                    <!-- end detail tab -->
                   </div>
                 </div>
               </div>
-              <!-- end col -->
             </div>
-            <!-- end row -->
           </div>
         </div>
-        <!-- END ROW -->
-      </div>
-    </section>
-    <h1>Favorites</h1>
+      </section>
+      <!-- end pro-detail -->
+    </body>
+    <!-- <h1>Favorites</h1>
     <div v-for="favorite in favorites" v-bind:key="favorite.id">
       <h2>{{ favorite.movie.original_title }}</h2>
       <span class="image">
@@ -60,7 +134,7 @@
       </form>
       <button v-on:click="destroyFavorite(favorite)">Remove from Favorites</button>
       <br />
-    </div>
+    </div> -->
   </div>
 </template>
 
