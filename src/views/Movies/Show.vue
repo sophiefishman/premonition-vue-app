@@ -12,9 +12,9 @@
               />
             </div>
             <div class="col-lg-6">
-              <div class="d-flex align-items-center py-3">
+              <div class="d-flex align-items-center py-6">
                 <h6>
-                  <div class="col-sm-4 py-sm-0 py-3">
+                  <div class="col-sm-12 py-sm-0 py-3">
                     <h5>{{ movie.original_title }}</h5>
                   </div>
                 </h6>

@@ -18,12 +18,12 @@
                 <div class="col-md-7 mt-4">
                   <div class="pro-detail-content">
                     <div class="price my-3">
-                      <del class="pe-2 fs-15 fw-semibold text-decoration-none text-dark">
+                      <del class="pe-2 fs-24 fw-semibold text-decoration-none text-dark">
                         {{ favorite.movie.original_title }}
                       </del>
                     </div>
 
-                    <p class="text-muted fs-16 my-3">
+                    <p class="text-muted fs-20 my-3">
                       {{ favorite.movie.overview }}
                     </p>
                     <!-- detail tab -->
@@ -33,17 +33,7 @@
                           <div class="col-lg-12">
                             <nav class="pro-detail-area">
                               <div class="nav nav-tabs border-bottom detail-title" id="nav-tab" role="tablist">
-                                <a
-                                  class="nav-link border-0"
-                                  id="nav-profile-tab"
-                                  data-bs-toggle="tab"
-                                  href="#nav-profile"
-                                  role="tab"
-                                  aria-controls="nav-profile"
-                                  aria-selected="false"
-                                >
-                                  Your Movie Notes
-                                </a>
+                                <p class="fw-semibold text-muted fs-16">Your Movie Notes</p>
                               </div>
                             </nav>
                             <div class="tab-content py-4" id="nav-tabContent">
@@ -60,7 +50,7 @@
                             </div>
                             <!-- end nav -->
                             <div>
-                              <p class="lh-base fw-semibold mt-4 mb-3">Update Your Notes</p>
+                              <p class="lh-base fw-semibold text-muted mt-4 mb-3">Update Your Notes</p>
                               <form>
                                 <div class="row g-4 mb-2"></div>
                                 <div class="row g-4 mb-2">
@@ -69,7 +59,7 @@
                                       <textarea
                                         class="form-control"
                                         placeholder="Your Message...."
-                                        style="height: 100px"
+                                        style="height: 60px"
                                         v-model="favorite.review"
                                       ></textarea>
                                       <label class="text-muted">Your Review</label>
@@ -116,7 +106,7 @@
       </section>
       <!-- end pro-detail -->
     </body>
-    <h1>Favorites</h1>
+    <!-- <h1>Favorites</h1>
     <div v-for="favorite in favorites" v-bind:key="favorite.id">
       <h2>{{ favorite.movie.original_title }}</h2>
       <span class="image">
@@ -138,7 +128,7 @@
       </form>
       <button v-on:click="destroyFavorite(favorite)">Remove from Favorites</button>
       <br />
-    </div>
+    </div> -->
   </div>
 </template>
 

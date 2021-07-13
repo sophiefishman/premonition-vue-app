@@ -62,7 +62,7 @@
         <!-- end container -->
       </section>
     </body>
-    <h2>{{ user.name }}</h2>
+    <!-- <h2>{{ user.name }}</h2>
     <p>Email: {{ user.email }}</p>
     <p>
       Name:
@@ -73,7 +73,7 @@
       <input type="text" v-model="user.email" />
     </p>
     <button v-on:click="updateUser(user)">Update Info</button>
-    <button v-on:click="destroyUser(user)">Delete Profile</button>
+    <button v-on:click="destroyUser(user)">Delete Profile</button> -->
   </div>
 </template>
 
