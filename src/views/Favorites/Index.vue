@@ -61,7 +61,7 @@
                             <!-- end nav -->
                             <div>
                               <p class="lh-base fw-semibold mt-4 mb-3">Update Your Notes</p>
-                              <form v-on:submit.prevent="editReview(favorite)">
+                              <form>
                                 <div class="row g-4 mb-2"></div>
                                 <div class="row g-4 mb-2">
                                   <div class="col-lg-12">
@@ -79,7 +79,11 @@
                                 <div class="row"></div>
                                 <div class="row">
                                   <div class="col-lg-12 mt-3">
-                                    <a href="javascript:void(0)" class="btn btn-primary">
+                                    <a
+                                      href="javascript:void(0)"
+                                      class="btn btn-primary"
+                                      v-on:click="editReview(favorite)"
+                                    >
                                       Update Notes
                                       <i class="icon-xs" data-feather="chevrons-right"></i>
                                     </a>
@@ -112,7 +116,7 @@
       </section>
       <!-- end pro-detail -->
     </body>
-    <!-- <h1>Favorites</h1>
+    <h1>Favorites</h1>
     <div v-for="favorite in favorites" v-bind:key="favorite.id">
       <h2>{{ favorite.movie.original_title }}</h2>
       <span class="image">
@@ -134,7 +138,7 @@
       </form>
       <button v-on:click="destroyFavorite(favorite)">Remove from Favorites</button>
       <br />
-    </div> -->
+    </div>
   </div>
 </template>
 
