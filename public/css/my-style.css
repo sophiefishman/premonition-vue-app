@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+html {
+  background-color: rgb(40, 40, 40);
+}
+#header-font > h2 {
+  font-family: "Nosifer";
+  color: rgba(32, 33, 31, 0.927);
+  text-shadow: 4px 4px 5px rgb(205, 239, 83);
+}
+
+.btn-primary {
+  background-color: rgb(181, 211, 75);
+  border: rgb(181, 211, 75);
+}
+.btn-primary:hover {
+  background-color: rgba(181, 211, 75, 0.791);
+  border: rgba(181, 211, 75, 0.791);
+}
+#header-color {
+  background-color: #2d7c9b !important;
+  background-image: url(https://i.pinimg.com/originals/6a/73/14/6a7314e874335adbd3457f4bdec5b0da.jpg);
+}
+
+/* style="
+          background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2eddd3ac-be22-4ebd-83e4-1d9305397920/ddnwcqr-45ca5d82-8251-427b-a7cb-fbb377bafbdf.jpg/v1/fill/w_1280,h_635,q_75,strp/cyberpunk_city_2__blade_runner_by_feliksovich_ddnwcqr-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjM1IiwicGF0aCI6IlwvZlwvMmVkZGQzYWMtYmUyMi00ZWJkLTgzZTQtMWQ5MzA1Mzk3OTIwXC9kZG53Y3FyLTQ1Y2E1ZDgyLTgyNTEtNDI3Yi1hN2NiLWZiYjM3N2JhZmJkZi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.8cBVD6lrB_6xT-KG6fn-FINPKVXrxvs4MtoFuZJmb4Y)
+            center center;
+        " */

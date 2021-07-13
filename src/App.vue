@@ -10,7 +10,7 @@
       <router-link to="/favorites">Favorites</router-link>
     </div> -->
     <body data-bs-target=".navbar" data-bs-offset="110">
-      <nav class="navbar navbar-expand-lg fixed-top sticky mx-auto" id="navbar">
+      <nav class="navbar navbar-expand-lg sticky mx-auto" id="navbar">
         <div class="container">
           <a href="index.html" class="navbar-brand me-4">
             <img
@@ -60,10 +60,10 @@
         </div>
       </nav>
 
-      <section class="section bg-light">
+      <section class="section bg-light" id="header-color">
         <div class="container">
           <div class="row align-items-center text-center">
-            <div class="col-lg-12 mt-5 pt-3" id="header-font">
+            <div class="col-lg-12 mt-1 pt-1" id="header-font">
               <h2>P R E M O N I T I O N</h2>
               <h2>what will you watch next....</h2>
             </div>

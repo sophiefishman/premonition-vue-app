@@ -12,6 +12,7 @@
                       class="img-fluid rounded-3"
                       v-bind:src="`https://image.tmdb.org/t/p/w500${favorite.movie.poster_path}`"
                       v-bind:alt="favorite.movie.name"
+                      style="vertical-align: middle; margin: 50px 0px"
                     />
                   </div>
                 </div>
@@ -57,18 +58,17 @@
                                   <div class="col-lg-12">
                                     <div class="form-floating mb-3">
                                       <textarea
-                                        class="form-control"
+                                        class="form-control text-muted"
                                         placeholder="Your Message...."
                                         style="height: 60px"
                                         v-model="favorite.review"
                                       ></textarea>
-                                      <label class="text-muted">Your Review</label>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="row"></div>
                                 <div class="row">
-                                  <div class="col-lg-12 mt-3">
+                                  <div class="col-lg-6 mt-3">
                                     <a
                                       href="javascript:void(0)"
                                       class="btn btn-primary"
@@ -78,10 +78,10 @@
                                       <i class="icon-xs" data-feather="chevrons-right"></i>
                                     </a>
                                   </div>
-                                  <div class="col-lg-12 mt-3">
+                                  <div class="col-lg-6 mt-3">
                                     <a
                                       href="javascript:void(0)"
-                                      class="btn btn-primary mt-3"
+                                      class="btn btn-warning"
                                       v-on:click="destroyFavorite(favorite)"
                                     >
                                       Delete Favorite
