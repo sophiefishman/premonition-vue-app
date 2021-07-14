@@ -59,7 +59,6 @@
           </div>
         </div>
       </nav>
-
       <section class="section bg-light" id="header-color">
         <div class="container">
           <div class="row align-items-center text-center">

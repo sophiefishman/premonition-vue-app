@@ -4,21 +4,21 @@ html {
 }
 #header-font > h2 {
   font-family: "Nosifer";
-  color: rgba(32, 33, 31, 0.927);
-  text-shadow: 4px 4px 5px rgb(205, 239, 83);
+  color: rgba(36, 36, 36, 0.927);
+  text-shadow: 6px 6px 5px rgb(208, 242, 85);
 }
 
 .btn-primary {
-  background-color: rgb(181, 211, 75);
+  background-color: rgba(181, 211, 75, 0.791);
   border: rgb(181, 211, 75);
 }
 .btn-primary:hover {
-  background-color: rgba(181, 211, 75, 0.791);
-  border: rgba(181, 211, 75, 0.791);
+  background-color: rgba(142, 165, 58, 0.791);
+  border: rgba(142, 165, 58, 0.791);
 }
 #header-color {
-  background-color: #2d7c9b !important;
-  background-image: url(https://i.pinimg.com/originals/6a/73/14/6a7314e874335adbd3457f4bdec5b0da.jpg);
+  background-color: #ffffff !important;
+  background-image: url(/images/headerv3.png);
 }
 
 /* style="
