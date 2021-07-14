@@ -1,6 +1,17 @@
 <template>
   <div class="favorites-index">
     <body data-bs-target=".navbar" data-bs-offset="110">
+      <!-- start title -->
+      <section class="section bg-light">
+        <div class="container">
+          <div class="row align-items-center text-center">
+            <div class="col-lg-12 mt-5 pt-3">
+              <h2 class="neon-text">f a v o r i t e s</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end title -->
       <section class="sm-section">
         <div v-for="favorite in favorites" v-bind:key="favorite.id" class="container">
           <div class="row">

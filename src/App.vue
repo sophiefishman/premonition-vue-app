@@ -64,7 +64,7 @@
           <div class="row align-items-center text-center">
             <div class="col-lg-12 mt-1 pt-1" id="header-font">
               <h2>P R E M O N I T I O N</h2>
-              <h2>what will you watch next....</h2>
+              <p>what will you watch next....</p>
             </div>
           </div>
         </div>

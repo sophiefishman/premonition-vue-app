@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 html {
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(41, 39, 40);
 }
 #header-font > h2 {
   font-family: "Nosifer";
-  color: rgb(27, 27, 27);
-  text-shadow: 6px 6px 5px rgb(219, 255, 88);
+  color: #fff;
+  text-shadow: 0px 6px 5px rgb(219, 255, 88), 0 0 10px rgb(255, 0, 195);
+  font-size: 60px;
+}
+#header-font > p {
+  font-family: "Nosifer";
+  color: #fff;
+  text-shadow: 0px 6px 5px rgb(219, 255, 88), 0 0 10px rgb(255, 0, 195);
+  font-size: 30px;
 }
 
 .btn-primary {
@@ -19,6 +27,15 @@ html {
 #header-color {
   background-color: #ffffff !important;
   background-image: url(/images/final.png);
+}
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px rgb(255, 0, 195), 0 0 21px rgb(255, 0, 195), 0 0 42px rgb(255, 0, 195),
+    0 0 82px rgb(255, 0, 195), 0 0 92px rgb(255, 0, 195), 0 0 102px rgb(255, 0, 195), 0 0 151px rgb(255, 0, 195);
+  font-family: "Press Start 2P", cursive;
+}
+.bg-light {
+  background-color: #ffffff !important;
 }
 
 /* style="
