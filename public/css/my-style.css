@@ -4,12 +4,12 @@ html {
 }
 #header-font > h2 {
   font-family: "Nosifer";
-  color: rgba(36, 36, 36, 0.927);
-  text-shadow: 6px 6px 5px rgb(208, 242, 85);
+  color: rgb(27, 27, 27);
+  text-shadow: 6px 6px 5px rgb(219, 255, 88);
 }
 
 .btn-primary {
-  background-color: rgba(181, 211, 75, 0.791);
+  background-color: rgb(181, 211, 75);
   border: rgb(181, 211, 75);
 }
 .btn-primary:hover {
@@ -18,7 +18,7 @@ html {
 }
 #header-color {
   background-color: #ffffff !important;
-  background-image: url(/images/headerv3.png);
+  background-image: url(/images/final.png);
 }
 
 /* style="

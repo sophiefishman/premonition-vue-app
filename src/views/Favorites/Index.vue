@@ -12,7 +12,7 @@
                       class="img-fluid rounded-3"
                       v-bind:src="`https://image.tmdb.org/t/p/w500${favorite.movie.poster_path}`"
                       v-bind:alt="favorite.movie.name"
-                      style="vertical-align: middle; margin: 50px 0px"
+                      style="vertical-align: middle; margin: 70px 0px"
                     />
                   </div>
                 </div>
@@ -24,7 +24,7 @@
                       </del>
                     </div>
 
-                    <p class="text-muted fs-20 my-3">
+                    <p class="text-muted fs-18 my-3">
                       {{ favorite.movie.overview }}
                     </p>
                     <!-- detail tab -->
@@ -60,7 +60,7 @@
                                       <textarea
                                         class="form-control text-muted"
                                         placeholder="Your Message...."
-                                        style="height: 60px"
+                                        style="height: 80px"
                                         v-model="favorite.review"
                                       ></textarea>
                                     </div>
