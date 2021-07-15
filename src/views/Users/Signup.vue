@@ -84,7 +84,7 @@
         </div>
       </section>
     </body>
-    <form v-on:submit.prevent="submit()">
+    <!-- <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
       <ul>
         <li class="text-danger" v-for="error in errors" v-bind:key="error">
@@ -138,7 +138,7 @@
         value="Submit"
       />
       <input v-else type="submit" class="btn btn-primary" value="Submit" />
-    </form>
+    </form> -->
     <!-- newUserParams: {{ newUserParams }} -->
   </div>
 </template>
